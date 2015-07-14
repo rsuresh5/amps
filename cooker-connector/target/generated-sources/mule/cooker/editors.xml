@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<namespace xmlns="http://www.mulesoft.org/schema/mule/tooling.attributes" xmlns:mule="http://www.mulesoft.org/schema/mule/core" url="http://www.mulesoft.org/schema/mule/cooker" prefix="cooker">
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="Cooker" description="" icon="" localId="parentConfig" image="" abstract="true" extends="http://www.mulesoft.org/schema/mule/cooker/abstractCookerConnectorGeneric"></global-cloud-connector>
+  <cloud-connector-message-source supportsInbound="true" supportsOutbound="false" versions="[3.5.0,8.0.0]" caption="Cooker (Streaming)" description="Anypoint Connector." icon="icons/small/cooker-endpoint-24x16.png" localId="endpoint" image="icons/large/cooker-endpoint-48x32.png" abstract="false" extends="http://www.mulesoft.org/schema/mule/cooker/abstractCookerConnectorGeneric">
+    <attribute-category caption="General" description="General.">
+      <group id="cookerConnectorGeneric" caption="Basic Settings">
+        <modeSwitch alwaysCombo="true" name="Cooker operations to execute" caption="Operation" description="Operation.">
+          <no-operation abstractElement="http://www.mulesoft.org/schema/mule/cooker/abstractCookerConnectorGeneric" versions="[3.5.0,8.0.0]" connector-name="source"></no-operation>
+          <mode modeId="http://www.mulesoft.org/schema/mule/cooker/get-recently-added-source" modeLabel="Get recently added source"></mode>
+        </modeSwitch>
+      </group>
+    </attribute-category>
+  </cloud-connector-message-source>
+  <cloud-connector-message-source supportsInbound="true" supportsOutbound="false" inboundLocalName="get-recently-added-source" caption="Get Recently Added Source" description="Dummy operation to avoid compilation issues since @Connector need at
+least on @Processor, @Transformer or @Source." icon="icons/small/cooker-endpoint-24x16.png" localId="get-recently-added-source" image="icons/large/cooker-endpoint-48x32.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/cooker/abstractCookerConnectorGeneric">
+    <attribute-category caption="General" description="General."></attribute-category>
+  </cloud-connector-message-source>
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="Cooker: Configuration type strategy" description="Global Configuration type strategy configuration information. Configuration type Strategy." icon="icons/small/cooker-connector-24x16.png" localId="config-type" image="icons/large/cooker-connector-48x32.png" abstract="false" extends="http://www.mulesoft.org/schema/mule/cooker/parentConfig" connectivityTesting="off" metaData="static" metaDataKeyDisplay="DISPLAY_NAME">
+    <attribute-category caption="General" description="Cooker configuration properties.">
+      <group id="cookerGenericProperties" caption="Basic Settings">
+        <name name="name" caption="Name" description="Give a name to this configuration so it can be later referenced by config-ref." required="true"></name>
+      </group>
+    </attribute-category>
+  </global-cloud-connector>
+  <cloud-connector caption="Abstractcookerconnectorgeneric" description="Interact with Cooker." icon="icons/small/cooker-connector-24x16.png" localId="abstractCookerConnectorGeneric" image="icons/large/cooker-connector-48x32.png" abstract="true">
+    <attribute-category caption="General" description="General.">
+      <group id="abstractCookerConnectorGeneric" caption="Basic Settings">
+        <globalRef requiredType="http://www.mulesoft.org/schema/mule/cooker/config-type" name="config-ref" caption="Connector Configuration" description="Specify which configuration to use for this invocation." required="true"></globalRef>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector versions="[3.5.0,8.0.0]" aliasId="org.mule.tooling.ui.modules.core.pattern.cooker" caption="Cooker" description="Anypoint Connector." icon="icons/small/cooker-connector-24x16.png" localId="cooker-connector" image="icons/large/cooker-connector-48x32.png" extends="http://www.mulesoft.org/schema/mule/cooker/abstractCookerConnectorGeneric">
+    <attribute-category caption="General" description="General.">
+      <group id="cookerConnectorGeneric" caption="Basic Settings">
+        <modeSwitch alwaysCombo="true" name="Cooker operations to execute" caption="Operation" description="Operation.">
+          <no-operation abstractElement="http://www.mulesoft.org/schema/mule/cooker/abstractCookerConnectorGeneric" versions="[3.5.0,8.0.0]" connector-name="processor"></no-operation>
+        </modeSwitch>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+</namespace>
