@@ -1,0 +1,8 @@
+https://docs.mulesoft.com/anypoint-connector-devkit/v/3.7/
+https://github.com/patarleth/mule_samples/wiki/Build-a-custom-mule-connector
+https://dzone.com/articles/extending-mule-devkit-%E2%80%93
+http://jcavallotti.blogspot.in/2013/05/how-to-build-cloud-connector-for-mule.html
+https://docs.mulesoft.com/anypoint-connector-devkit/v/3.7/defining-connector-attributes
+https://docs.mulesoft.com/anypoint-connector-devkit/v/3.7/packaging-your-connector-for-release
+https://docs.mulesoft.com/anypoint-connector-devkit/v/3.7/tutorial-barn-connector
+http://cs.lmu.edu/~ray/notes/javanetexamples/#date
