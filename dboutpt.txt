@@ -1,0 +1,5 @@
+select current_timestamp, current_timezone, current_timestamp-current_timezone from sysibm.sysdummy1;
+
+1                                 2 3                         
+-------------------------- -------- --------------------------
+2016-02-11 07:01:37.033000    53000 2016-02-11 01:31:37.033000
